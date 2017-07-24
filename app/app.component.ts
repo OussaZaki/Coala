@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "co-app",
-    templateUrl: "app.component.html",
+    template: "<page-router-outlet></page-router-outlet>"
 })
 
 export class AppComponent { }

@@ -1,0 +1,34 @@
+.background {
+  background-image: url("res://bg_codeblocks");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.initial-container {
+  margin-top: 170;
+}
+.initial-logo-container{
+  border-radius: 60;
+  padding: 15;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.initial-label {
+  color: white;
+  horizontal-align: center;
+  margin-top: 10;
+  margin-bottom: 80;
+}
+.initial-button {
+  background-color: #1C7BC8;
+  color: white;
+  height: 45;
+  width: 275;
+  vertical-align: center;
+}
+.initial-button-label {
+  horizontal-align: center;
+  font-weight: bold;
+}
+Image {
+  margin: 5;
+}

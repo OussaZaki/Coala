@@ -1,0 +1,17 @@
+<GridLayout>
+
+  <GridLayout #background scaleX="1.4" scaleY="1.4" class="background" (loaded)="startBackgroundAnimation(background)"></GridLayout>
+
+  <StackLayout #initialContainer class="initial-container">
+    <GridLayout columns="auto, auto" rows="auto" horizontalAlignment="center" verticalAlignment="center">
+      <StackLayout class="initial-logo-container">
+        <Image src="res://logo_codeblocks" stretch="none" class="initial-logo"></Image>
+      </StackLayout>
+    </GridLayout>
+    <Label text="Kuizu" class="initial-label"></Label>
+    <StackLayout (tap)="play()" class="initial-button">
+      <Label text="Play" class="initial-button-label"></Label>
+    </StackLayout>
+  </StackLayout>
+
+</GridLayout>
