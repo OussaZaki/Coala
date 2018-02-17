@@ -3,7 +3,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/main", pathMatch: "full" }
+    { path: "", redirectTo: "/codeblocks", pathMatch: "full" }
 ];
 
 @NgModule({

@@ -1,12 +1,67 @@
 <GridLayout>
 
-  <GridLayout #background scaleX="1" scaleY="1" class="background"></GridLayout>
+    <GridLayout scaleX="1" scaleY="1" class="background"></GridLayout>
 
-  <StackLayout #infoContainer class="info-container">
-      <Label text="Information" class="initial-button-label"></Label>
-  </StackLayout>
+    <StackLayout #introContainer class="header-container">
+        <GridLayout #logoContainer class="logo-container coala-container">
+            <StackLayout class="game-logo-container">
+                <Image src="res://logo_codeblocks" scaleX="0.8" scaleY="0.8" stretch="none" class="game-logo"></Image>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout #headerContainer class="coala-container">
+            <TextView isEditable="false" text="Use the code blocks to complete the code." class="game-label"></TextView>
+        </GridLayout>
+        <AbsoluteLayout #demoContainer class="demo-container">
+            <Label text="" left="50" top="10" width="70" class="demo-block"></Label>
+            <Label text="" left="128" top="10" width="35" class="demo-block"></Label>
+            <Label text="" left="93" top="44" width="45" class="demo-block"></Label>
+            <Label text="" left="146" top="44" width="70" class="demo-block"></Label>
+            <Label text="" left="224" top="44" width="45" class="demo-block"></Label>
+            <Label text="" left="93" top="80" width="60" class="demo-block"></Label>
+            <Label text="" left="161" top="80" width="40" class="demo-block"></Label>
+            <Label text="" left="209" top="80" width="60" class="demo-block"></Label>
+            <Label text="" left="50" top="114" width="35" class="demo-block"></Label>
+            <Label text="" left="93" top="114" width="70" class="demo-block"></Label>
+        </AbsoluteLayout>
+        <GridLayout #tipContainer rows="25, *" class="coala-container">
+            <TextView row="0" isEditable="false" text="Pro tip:" class="tip"></TextView>
+            <TextView row="1" isEditable="false" text="Drag and drop to rearrange inside the code" class="tip-text"></TextView>
+        </GridLayout>
+        <GridLayout #buttonContainer (tap)="start()" class="initial-button">
+            <Label text="Start Game" class="initial-button-label"></Label>
+        </GridLayout>
+    </StackLayout>
 
-  <StackLayout #gameContainer class="game-container">
-      <Label text="Game Happening" class="initial-button-label"></Label>
-  </StackLayout>
+    <AbsoluteLayout class="objective-container">
+        <TextView #objectiveLabel isEditable="false" text="Create a numbered list of songs using the correct mark up" class="objective-label"></TextView>
+    </AbsoluteLayout>
+
+    <StackLayout #gameContainer class="game-container">
+        <GridLayout class="game-header">
+            <Label class="score" text="15"></Label>
+            <Label class="life fa" text="&#xf004;&#xf004;&#xf004;&#xf08a;"></Label>
+        </GridLayout>
+        <AbsoluteLayout #dropContainer class="demo-container drop-area">
+            <Label text="<body>"></Label>
+            <Label text="</body>" top="170"></Label>
+        </AbsoluteLayout>
+        <FlexboxLayout class="drag-area">
+            <Label text="<ol>" class="code-block" (tap)="addBlock($event)"></Label>
+            <Label text="</ol>" class="code-block" (tap)="addBlock($event)"></Label>
+            <Label text="</li>" class="code-block" (tap)="addBlock($event)"></Label>
+            <Label text="Way Down We Go" class="code-block" (tap)="addBlock($event)"></Label>
+            <Label text="Highway To Hell" class="code-block" (tap)="addBlock($event)"></Label>
+            <Label text="<a>" class="code-block"></Label>
+            <Label text="</a>" class="code-block"></Label>
+            <Label text="<ul>" class="code-block"></Label>
+            <Label text="</ul>" class="code-block"></Label>
+            <Label text="<li>" class="code-block"></Label>
+            <Label text="</li>" class="code-block"></Label>
+            <Label text="<li>" class="code-block"></Label>
+        </FlexboxLayout>
+        <GridLayout (tap)="start()" class="submit-button">
+            <Label text="Submit Code" class="initial-button-label"></Label>
+        </GridLayout>
+    </StackLayout>
+
 </GridLayout>
