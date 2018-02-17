@@ -1,16 +1,23 @@
 @import url("./platform.css");
-
 Page {
-  font-size: 15;
+  font-size: 16;
+  font-family: 'Open Sans';
 }
+
 ActionBar {
   background-color: black;
   color: white;
 }
+
 TextField {
   padding: 10;
   font-size: 13;
 }
+
 .line-through {
   text-decoration: line-through;
+}
+
+.fa {
+  font-family: 'FontAwesome', 'fontawesome-webfont';
 }
